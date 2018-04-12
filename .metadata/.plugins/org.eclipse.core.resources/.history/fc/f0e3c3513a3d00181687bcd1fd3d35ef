@@ -1,0 +1,42 @@
+import static org.junit.jupiter.api.Assertions.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+
+class EbayTestValidation {
+	
+	private static final By ByLinkText = null;
+	static WebDriver driver = null;
+	
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+
+		System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");		
+		WebDriver driver=new ChromeDriver();
+		
+}
+	@Before
+	public void setUp() throws Exception {
+		
+				driver.get("https://www.ebay.com/");
+		
+	}
+
+	@Test
+	public void testAddToCart() {
+		driver.get("https://www.ebay.com/");
+		driver. 
+	}
+	@AfterClass
+	public static void CleanUP() {
+		driver.quit();
+	}
+	
+
+}

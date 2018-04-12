@@ -1,0 +1,49 @@
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class Validation {
+
+	public static void main(String[] args) throws InterruptedException
+	{
+		System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		WebDriver driver=new ChromeDriver();
+	    driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30,  TimeUnit.SECONDS);
+		driver.get("https://www.ebay.com/");
+		driver.navigate().to("https://www.ebay.com/");
+		/*sert.assertEquals("Ebay",driver.getTitle(),"Strings are not matched");
+		Assert.assertTrue(isUserLoggedInSuccessfully(),"User failed to login");
+		Assert.assertFalse(isUserLoggedOut())
+		/*
+		WebElement myAccount = driver.findElement(By.xpath(""));
+		Assert.assertTrue
+		*/
+		}
+	}
+
+

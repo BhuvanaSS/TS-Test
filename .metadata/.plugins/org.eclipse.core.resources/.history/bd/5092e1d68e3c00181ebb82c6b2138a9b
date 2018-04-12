@@ -1,0 +1,60 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Demo {
+
+	public static void main(String[] args) throws Exception
+	
+	{
+		// TODO Auto-generated method stub
+		
+		System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
+		
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://www.amazon.com/");
+		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Laptops");
+		driver.findElement(By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/div[3]/div[1]/form[1]/div[2]/div[1]")).click();
+		
+		//driver.findElement(By.xpath("//input[@type='submit']")).click();
+		driver.findElement(By.xpath("//h4[@class='a-size-small a-spacing-mini a-color-base a-text-bold'][contains(text(),'Brand')]")).click();
+		
+		
+		
+		
+		
+		//driver.findElement(By.xpath("//input[contains(@name,'s-ref-checkbox-HP\')]")).click();
+		//driver.findElement(By.xpath("//input[contains(@name,'s-ref-checkbox-Dell\')]")).click();
+		//driver.findElement(By.xpath("//input[contains(@name,'s-ref-checkbox-Acer\')]")).click();
+		//driver.findElement(By.xpath("//input[contains(@name,'s-ref-checkbox-Lenovo\')]")).click();
+		//driver.findElement(By.xpath("//input[contains(@name,'s-ref-checkbox-Apple\')]")).click();
+			////Step 21 and 22. Go to Find Lead. Enter From Lead Id.Clck on find Leads.
+//click(locateElement("linkText","Find Leads"));
+//type(locateElement("name","id"), idThree);
+//click(locateElement("class","x-btn-text"));
+//System.out.println("Merge Lead Executed Successfully");
+		//driver.findElementByXPath("(//a//img[@alt='Lookup'])[2]").click();
+		//System.out.println(driver.getTitle());
+		// driver.findElementById("aCsJod oJeWuf").sendKeys("bhuvana.clematis@gmail.com");
+		//driver.findElementById("userRegistrationForm:userName").sendKeys("moushmic");
+		//driver.findElement(By.id("email")).sendKeys("bhuvana.clematis@gmail.com");
+		//driver.findElement(By.id("password")).sendKeys("s4r4sw4thi");
+		//driver.findElement(ByLinkText("Sign up").click());
+		//driver.findElementByLinkText("Sign up").click();
+		//driver.findElementById("userRegistrationForm:userName").sendKeys("moushmic");
+		//driver.findElementById("userRegistrationForm:password").sendKeys("moush@123");
+		//driver.findElementById("userRegistrationForm:confpasword").sendKeys("moush@123");
+
+		//WebElement SecurityQues = driver.findElementById("userRegistrationForm:securityQ");
+		//Select d1 = new Select(SecurityQues);
+		//d1.selectByIndex(7);
+		//driver.findElementById("userRegistrationForm:securityAnswer").sendKeys("Secutiy Anser");
+
+	
+	}
+
+	
+
+}

@@ -1,0 +1,61 @@
+package datadriven.test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+public class ebay {
+
+	@BeforeMethod
+	public void setup() {
+		// TODO Auto-generated method stub
+		
+		System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.ebay.com/");
+	}
+	@DataProvider
+	public void getTestData() {
+	}
+	@Test
+	public void orderanitem(String args[]) {
+		WebDriver driver;
+		driver.findElement(By.id("gh-ac")).sendKeys("Laptops");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//input[@type='submit']")).click();
+		driver.findElement(By.xpath("/html[1]/body[1]/div[5]/div[1]/div[1]/div[2]/div[1]/span[2]/a[1]")).click();
+		driver.findElement(By.xpath("/html[1]/body[1]/div[5]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[4]/div[2]/div[1]/a[1]/input[1]")).click();
+		System.out.println(driver.findElement(By.xpath("/html[1]/body[1]/div[5]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[4]/div[2]/div[1]/a[1]/input[1]")).isSelected());
+		driver.findElement(By.xpath("/html[1]/body[1]/div[5]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/w-root[1]/div[1]/div[1]/ul[1]/li[1]/h3[1]/a[1]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//html//div[contains(@class,'actPanel  vi-noborder')]/div[contains(@class,'u-cb')]/span[1]")).click();
+		driver.findElement(By.xpath("//span[contains(text(),'Checkout 1 item')]")).click();
+	}
+
+
+	/*driver.findElement(By.linkText("Sign in")).click();
+		driver.findElement(By.id("userid")).sendKeys("bhuvana.sara@hotmail.com");
+		driver.findElement(By.id("pass")).sendKeys("4ureyes");
+		driver.findElement(By.id("sgnBt")).click();
+	 */
+
+	@AfterMethod
+	public void tearDown() {
+		driver.quit();
+	}
+
+
+
+
+
+}
+
+
+
+}
+
+}

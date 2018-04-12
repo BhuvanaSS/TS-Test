@@ -1,0 +1,41 @@
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Demo {
+
+	public static void main(String[] args) throws Exception
+
+	{
+
+		System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
+
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30,  TimeUnit.SECONDS);
+		driver.get("https://www.ebay.com/");
+
+		driver.findElement(By.linkText("Sign in")).click();
+		driver.findElement(By.id("userid")).sendKeys("bhuvana.sara@hotmail.com");
+		driver.findElement(By.id("pass")).sendKeys("4ureyes");
+		driver.findElement(By.id("sgnBt")).click();
+
+
+
+		driver.findElement(By.id("gh-ac")).sendKeys("Laptops");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//input[@type='submit']")).click();
+		driver.findElement(By.xpath("/html[1]/body[1]/div[5]/div[1]/div[1]/div[2]/div[1]/span[2]/a[1]")).click();
+		driver.findElement(By.xpath("/html[1]/body[1]/div[5]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[5]/div[2]/div[1]/a[1]/input[1]")).click();
+		System.out.println(driver.findElement(By.xpath("/html[1]/body[1]/div[5]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[5]/div[2]/div[1]/a[1]/input[1]")).isSelected());
+		driver.findElement(By.xpath("/html[1]/body[1]/div[5]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/w-root[1]/div[1]/div[1]/ul[1]/li[1]/h3[1]/a[1]")).click();
+		Thread.sleep(2000);
+		//driver.findElement(By.xpath("/html[1]/body[1]/div[5]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/w-root[1]/div[1]/div[1]/ul[1]/li[1]/h3[1]/a[1]")).click();
+		driver.findElement(By.xpath("/html[1]/body[1]/div[3]/div[2]/div[1]/div[1]/div[2]/div[5]/div[1]/form[1]/div[2]/div[1]/div[4]/span[1]/a[1]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//span[contains(text(),'Checkout 1 item')]")).click();
+
+	}
+}

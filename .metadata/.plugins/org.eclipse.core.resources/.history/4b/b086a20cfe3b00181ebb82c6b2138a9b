@@ -1,0 +1,37 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.getProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
+		
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://www.amazon.com/");
+		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Laptops");
+		//System.out.println(driver.getTitle());
+		// driver.findElementById("aCsJod oJeWuf").sendKeys("bhuvana.clematis@gmail.com");
+		//driver.findElementById("userRegistrationForm:userName").sendKeys("moushmic");
+		//driver.findElement(By.id("email")).sendKeys("bhuvana.clematis@gmail.com");
+		//driver.findElement(By.id("password")).sendKeys("s4r4sw4thi");
+		//driver.findElement(ByLinkText("Sign up").click());
+		//driver.findElementByLinkText("Sign up").click();
+		//driver.findElementById("userRegistrationForm:userName").sendKeys("moushmic");
+		//driver.findElementById("userRegistrationForm:password").sendKeys("moush@123");
+		//driver.findElementById("userRegistrationForm:confpasword").sendKeys("moush@123");
+
+		//WebElement SecurityQues = driver.findElementById("userRegistrationForm:securityQ");
+		//Select d1 = new Select(SecurityQues);
+		//d1.selectByIndex(7);
+		//driver.findElementById("userRegistrationForm:securityAnswer").sendKeys("Secutiy Anser");
+
+	}
+
+	
+
+}
